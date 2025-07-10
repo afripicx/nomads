@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Ubuntu:wght@300;400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* Tribal-inspired color scheme */
+    --background: 0 0% 100%; /* Clean white background */
+    --foreground: 20 45% 15%; /* Dark Tribal Brown foreground */
+
+    --card: 44 77% 97%; /* Very light Sahara Sand for cards */
+    --card-foreground: 20 45% 15%; /* Dark Tribal Brown */
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 45% 15%;
+
+    --primary: 0 61% 41%; /* Earth Red */
+    --primary-foreground: 0 0% 100%; /* White text on Earth Red */
+
+    --secondary: 70 28% 35%; /* Olive Green */
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 44 77% 95%;
+    --muted-foreground: 20 25% 40%;
+
+    --accent: 218 41% 30%; /* Indigo Blue */
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 61% 41%; /* Earth Red for destructive actions */
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 44 30% 85%;
+    --input: 44 30% 90%;
+    --ring: 0 61% 41%; /* Earth Red ring */
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    /* Dark tribal theme */
+    --background: 20 45% 8%; /* Dark Tribal Brown */
+    --foreground: 44 77% 91%; /* Sahara Sand text */
+
+    --card: 20 45% 12%;
+    --card-foreground: 44 77% 91%;
+
+    --popover: 20 45% 12%;
+    --popover-foreground: 44 77% 91%;
+
+    --primary: 0 61% 50%; /* Brighter Earth Red for dark mode */
+    --primary-foreground: 44 77% 91%;
+
+    --secondary: 70 28% 40%; /* Brighter Olive Green */
+    --secondary-foreground: 44 77% 91%;
+
+    --muted: 20 25% 15%;
+    --muted-foreground: 44 30% 70%;
+
+    --accent: 218 41% 40%; /* Brighter Indigo Blue */
+    --accent-foreground: 44 77% 91%;
+
+    --destructive: 0 61% 50%;
+    --destructive-foreground: 44 77% 91%;
+
+    --border: 20 25% 20%;
+    --input: 20 25% 18%;
+    --ring: 0 61% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family:
+      "Inter",
+      "Ubuntu",
+      system-ui,
+      -apple-system,
+      sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+}
